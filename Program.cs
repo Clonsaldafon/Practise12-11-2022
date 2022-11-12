@@ -10,14 +10,9 @@ namespace Practise12_11_2022
             string continent = Console.ReadLine();
 
             Handler handler = new Handler();
-            
-            List<Country> countries = handler.Read(continent);
-            countries = handler.Sort(countries);
 
-            foreach(var item in countries)
-            {
-                Console.WriteLine(item.Population);
-            }
+            handler.Countries = handler.Read(continent);
+            handler.Countries = handler.Sort(handler.Countries);
         }
     }
 }

@@ -5,10 +5,10 @@ namespace Practise12_11_2022
 {
     internal class Handler
     {
+        public List<Country> Countries = new List<Country>();
+
         public List<Country> Read(string continent)
         {
-            List<Country> countries = new List<Country>();
-
             bool isFirstLine = true;
             using (TextFieldParser parser = new TextFieldParser("..\\..\\..\\country.txt"))
             {
@@ -23,7 +23,7 @@ namespace Practise12_11_2022
                     {
                         if (fields[fields.Length - 1] == continent)
                         {
-                            countries.Add(
+                            Countries.Add(
                                 new Country(fields[0], fields[1], int.Parse(fields[2]), int.Parse(fields[3]), fields[4])
                             );
                         }
@@ -35,7 +35,7 @@ namespace Practise12_11_2022
                 }
             }
 
-            return countries;
+            return Countries;
         }
 
         public List<Country> Sort(List<Country> countries)
