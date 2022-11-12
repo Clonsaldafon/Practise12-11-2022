@@ -1,4 +1,4 @@
-﻿namespace Practise12_11_2022
+namespace Practise12_11_2022
 {
     internal class Program
     {
@@ -11,6 +11,8 @@
 
             handler.Read(continent);
             handler.Sort();
+
+            Writer.WriteToFile(handler.Countries);
         }
     }
 }
