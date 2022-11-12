@@ -7,7 +7,7 @@ namespace Practise12_11_2022
     {
         public List<Country> Countries = new List<Country>();
 
-        public List<Country> Read(string continent)
+        public void Read(string continent)
         {
             bool isFirstLine = true;
             using (TextFieldParser parser = new TextFieldParser("..\\..\\..\\country.txt"))
@@ -34,26 +34,22 @@ namespace Practise12_11_2022
                     }
                 }
             }
-
-            return Countries;
         }
 
-        public List<Country> Sort(List<Country> countries)
+        public void Sort()
         {
-            for (int i = 0; i < countries.Count; i++)
+            for (int i = 0; i < Countries.Count; i++)
             {
-                for (int j = 0; j < countries.Count - 1; j++)
+                for (int j = 0; j < Countries.Count - 1; j++)
                 {
-                    if (countries[j].Population > countries[j + 1].Population)
+                    if (Countries[j].Population > Countries[j + 1].Population)
                     {
-                        Country temp = countries[j + 1];
-                        countries[j + 1] = countries[j];
-                        countries[j] = temp;
+                        Country temp = Countries[j + 1];
+                        Countries[j + 1] = Countries[j];
+                        Countries[j] = temp;
                     }
                 }
             }
-
-            return countries;
         }
     }
 }
