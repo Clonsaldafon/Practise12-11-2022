@@ -6,7 +6,7 @@ namespace Practise12_11_2022
     {
         public static void WriteToFile(List<Country> list)
         {
-            Console.WriteLine("Введите название файла:");
+            Console.Write("Введите название файла:");
             string input = Console.ReadLine();
 
             using (StreamWriter newFile = new StreamWriter($"..\\..\\..\\{input}.txt"))
