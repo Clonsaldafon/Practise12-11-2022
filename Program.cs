@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualBasic.FileIO;
-using System.Text;
+﻿using System.Text;
 
 namespace Practise12_11_2022
 {
@@ -12,13 +11,8 @@ namespace Practise12_11_2022
 
             Handler handler = new Handler();
             
-            List<Country> countries = handler.Read(continent);
-            countries = handler.Sort(countries);
-
-            foreach(var item in countries)
-            {
-                Console.WriteLine(item.Population);
-            }
+            handler.Read(continent);
+            handler.Sort();
         }
 
         public static void WriteToFile(List<Country> list)
