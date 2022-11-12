@@ -9,14 +9,15 @@ namespace Practise12_11_2022
             Console.WriteLine("Введите название файла:");
             string input = Console.ReadLine();
 
-            StringBuilder builder = new StringBuilder();
-            builder.Append(input);
+            using (StreamWriter newFile = new StreamWriter($"..\\..\\..\\{input}.txt"))
+            {
+                newFile.WriteLine("Страна;Столица;Площадь;Население;Континент");
 
-            foreach (Country item in list)
-                builder.Append(item);
-
-            StreamWriter newFile = new StreamWriter("..\\..\\..\\NewFile.txt");
-            newFile.Write(builder.ToString());
+                foreach (Country item in list)
+                {
+                    newFile.WriteLine($"{item.Name};{item.Capital};{item.Area};{item.Population};{item.Continent}");
+                }
+            }
         }
     }
 }
