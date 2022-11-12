@@ -15,7 +15,7 @@ namespace Practise12_11_2022
             foreach (Country item in list)
                 builder.Append(item);
 
-            StreamWriter newFile = new StreamWriter("C:\\NewFile.txt");
+            StreamWriter newFile = new StreamWriter("..\\..\\..\\NewFile.txt");
             newFile.Write(builder.ToString());
         }
     }

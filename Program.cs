@@ -1,5 +1,3 @@
-using System.Text;
-
 namespace Practise12_11_2022
 {
     internal class Program
