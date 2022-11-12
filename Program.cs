@@ -1,4 +1,6 @@
-﻿namespace Practise12_11_2022
+using System.Text;
+
+namespace Practise12_11_2022
 {
     internal class Program
     {
@@ -8,7 +10,7 @@
             string continent = Console.ReadLine();
 
             Handler handler = new Handler();
-            
+
             handler.Read(continent);
             handler.Sort();
         }
